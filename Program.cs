@@ -45,6 +45,13 @@ namespace Final_Work{
                 }
             }
 
+            int CheckArray(string[] array, int lengthLimit){
+            int result = 0;
+            for (int i = 0; i < array.Length; i++){
+                if (array[i].Length <= lengthLimit) result++;
+                }
+            return result;
+            }
 
 
 
