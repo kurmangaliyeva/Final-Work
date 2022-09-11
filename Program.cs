@@ -26,6 +26,24 @@ namespace Final_Work{
             arrayOfStrings = new string[]  {"hello", "2", "world", ":-)"};
             }
 
+            int lengthLimit = 3;
+            int numbersItems = CheckArray(arrayOfStrings, lengthLimit);
+            string[] newArrayOfStrings = new string[numbersItems];
+
+            FillNewArray(arrayOfStrings, newArrayOfStrings, lengthLimit);
+
+            Console.WriteLine($"{PrintArray(newArrayOfStrings)}");
+
+            void FillNewArray(string[] oldArray, string[] newArray, int lengthLimit){
+            int temp = 0;
+            for (int i = 0; i < oldArray.Length; i++){
+                if (oldArray[i].Length <= lengthLimit)
+                {
+                newArray[temp] = oldArray[i];
+                temp++;
+                }
+                }
+            }
 
 
 
